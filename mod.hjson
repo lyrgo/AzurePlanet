@@ -1,23 +1,23 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "蔚蓝行星"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "ap"
 
 #your name
-author: "You"
+author: "各路大佬 & zzc梓辰 编写 & lyr重置至java"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "zzc.AzurePlanet"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "[green[]]这是一场工业与生态间的战斗,这场战斗将永不停歇."
 
 #the mod version
-version: 1.0
+version: 105
 
 #the minimum game build required to run this mod
-minGameVersion: 140
+minGameVersion: 144
 
 #this is a java mod
 java: true
