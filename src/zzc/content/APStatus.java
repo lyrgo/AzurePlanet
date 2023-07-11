@@ -1,11 +1,10 @@
 package zzc.content;
 
-import arc.graphics.Color;
-import mindustry.entities.effect.*;
+import mindustry.entities.effect.ParticleEffect;
+import mindustry.entities.effect.WaveEffect;
 import mindustry.type.StatusEffect;
-import zzc.interfaces.LoadContent;
+import zzc.util.interfaces.LoadContent;
 
-import static arc.graphics.Color.packRgba;
 import static arc.graphics.Color.valueOf;
 
 public class APStatus implements LoadContent {

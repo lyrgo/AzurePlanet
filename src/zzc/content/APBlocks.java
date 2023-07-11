@@ -4,16 +4,17 @@ import arc.struct.Seq;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
-import mindustry.world.blocks.environment.Floor;
 import mindustry.world.blocks.units.UnitFactory;
 import mindustry.world.meta.BuildVisibility;
-import zzc.interfaces.LoadContent;
+import zzc.util.interfaces.LoadContent;
 import zzc.world.blocks.RestoreCore;
 
-import static mindustry.content.Items.*;
-import static zzc.content.APItems.*;
-import static zzc.content.APLiquids.*;
-import static zzc.content.APUnits.*;
+import static mindustry.content.Items.graphite;
+import static mindustry.content.Items.silicon;
+import static zzc.content.APItems.biomass;
+import static zzc.content.APItems.cobalt;
+import static zzc.content.APLiquids.cultureMedium;
+import static zzc.content.APUnits.maggots;
 
 public class APBlocks implements LoadContent {
 
@@ -37,6 +38,7 @@ public class APBlocks implements LoadContent {
         restoreCore = new RestoreCore("restoreCore") {{
             size = 3;
             health = 1500;
+            amountRecovery = 5;
             configurable = true;
             buildVisibility = BuildVisibility.shown;
             requirements(Category.effect,ItemStack.with(graphite, 1500, cobalt, 1200));

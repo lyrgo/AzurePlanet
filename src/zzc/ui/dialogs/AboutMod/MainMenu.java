@@ -1,6 +1,5 @@
 package zzc.ui.dialogs.AboutMod;
 
-import arc.Core;
 import arc.func.Prov;
 import arc.graphics.Color;
 import arc.graphics.g2d.Draw;
@@ -10,6 +9,7 @@ import arc.scene.style.Drawable;
 import arc.scene.ui.Label;
 import arc.scene.ui.layout.Scl;
 import arc.util.Tmp;
+import mindustry.gen.Icon;
 import mindustry.gen.Tex;
 import mindustry.graphics.Pal;
 import mindustry.ui.WarningBar;
@@ -26,9 +26,13 @@ public class MainMenu extends BaseDialog {
 
     public ButtonEntry[] buttonEntries = new ButtonEntry[]{
             new ButtonEntry(APIcons.startIcon,
-                    () -> Core.bundle.get(ifStart? "dialog.startGame.name": "dialog.backToGame.name"),
+                    () -> bundle.get(ifStart? "dialog.startGame.name": "dialog.backToGame.name"),
                     () -> Color.white,
-                    () -> {hide(); ifStart = false;})
+                    () -> {hide(); ifStart = false;}),
+            new ButtonEntry(Icon.info,
+                    ()-> bundle.get("dialog.modChangelog.name"),
+                    () -> Color.violet,
+                    ()->AP.ui.modChangelog.show())
             };
 
     public MainMenu() {
@@ -80,9 +84,11 @@ public class MainMenu extends BaseDialog {
         image().color(Color.white).growX().height(2).pad(0).padTop(4);
         row();
         table(t -> {
-            t.add(AP.modDisplayName + AP.modVersion).left().padLeft(3);
+            t.add(AP.modDisplayName + AP.modDisplayVersion).left().padLeft(3);
             t.image().color(Color.white).growY().width(2).pad(0).margin(0).padLeft(4).colspan(4);
             t.add().growX();
+            t.image().color(Color.white).growY().width(2).pad(0).margin(0).padLeft(4).colspan(4);
+            t.add("UiAuthor:[blue]lyr");
         }).growX();
     }
 

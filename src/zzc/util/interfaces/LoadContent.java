@@ -1,4 +1,4 @@
-package zzc.interfaces;
+package zzc.util.interfaces;
 
 public interface LoadContent {
 

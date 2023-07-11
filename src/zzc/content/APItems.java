@@ -1,10 +1,8 @@
 package zzc.content;
 
-import arc.graphics.Color;
-import mindustry.type.*;
-import zzc.interfaces.LoadContent;
+import mindustry.type.Item;
+import zzc.util.interfaces.LoadContent;
 
-import static arc.graphics.Color.scarlet;
 import static arc.graphics.Color.valueOf;
 
 public class APItems implements LoadContent {
